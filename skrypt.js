@@ -127,3 +127,19 @@
             scrollbar.scrollTop = 0
         })
 
+        var createpost = document.querySelector('.createpost_button')
+        var createpost_box = document.querySelector('.createpost_box')
+        var cont_createpost = document.querySelector('.contener_createpost')
+
+        
+        var createstatus = document.querySelector('.createstatus_button')
+        var createstatus_box =document.querySelector('.createstatus_box')
+        var cont_createstatus = document.querySelector('.contener_createstatus')
+
+
+        createpost.addEventListener('click',function(){
+            cont_createpost.style.bottom = "0%"
+        })
+        cont_createpost.addEventListener('click',function(){
+            cont_createpost.style.bottom = "-100%"
+        })
