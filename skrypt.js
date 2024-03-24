@@ -140,6 +140,14 @@
         createpost.addEventListener('click',function(){
             cont_createpost.style.bottom = "0%"
         })
-        cont_createpost.addEventListener('click',function(){
+        cont_createpost.addEventListener('click',function(event){
+            if(cont_createpost!==event.target)return;
             cont_createpost.style.bottom = "-100%"
+        })
+        createstatus.addEventListener('click',function(){
+            cont_createstatus.style.bottom = "0%"
+        })
+        cont_createstatus.addEventListener('click',function(event){
+            if(cont_createstatus!==event.target)return;
+            cont_createstatus.style.bottom = "-100%"
         })

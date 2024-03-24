@@ -510,6 +510,9 @@ input:checked + .slider:before {
     position: absolute;
     bottom: -100%;
     z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .contener_createstatus{
     height: 100vh;
@@ -518,12 +521,43 @@ input:checked + .slider:before {
     position: absolute;
     bottom: -100%;
     z-index: 8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .createpost_box{
     width: 55%;
     height: 60vh;
+    background-color: #4d4949;
 }
 .createstatus_box{
     width: 55%;
     height: 60vh;
+    background-color: #4d4949;
+}
+.createpost_gora{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.createpost_gora input{
+    width: 20%;
+    height: 50px;
+    margin-top: 10px;
+}
+.createpost_dol{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.createpost_dol input {
+    width: 20%;
+    height: 40px;
+    background-color: #ccc;
 }

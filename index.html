@@ -105,9 +105,19 @@
 
     </main>
     <section class="contener_createpost">
-    <section class="createpost_box"></section></section>
+    <section class="createpost_box">
+        <section class="createpost_gora">
+            <input type="file" name="postimage" id="postimage">
+            <input type="text" placeholder="Podaj tytul postu" name="post_title" id="post_title">
+        </section>
+        <section class="createpost_dol">
+            <input type="button" value="Stwórz post">
+        </section>
+    </section></section>
     <section class="contener_createstatus">
-    <section class="createstatus_box"></section></section>
+    <section class="createstatus_box">
+        <section class="createstatus_text"></section>
+    </section></section>
     <script>
         window.addEventListener('load',function(){
             if(window.localStorage.czyzalogowano == 'tak'){
