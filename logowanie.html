@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <section class="container">
+      <input type="button" value="Powrót" class="powrot" onclick="window.location.replace('index.html')">
+        <section class="center">
+        <section class="logowaniebox">
+          <h1>Logowanie</h1>
+            <section class="gora">
+              <label for="inputnazwa">Nazwa:</label>
+                <input type="text" name="nazwa" id="inputnazwa" placeholder="Super nazwa"><br><br>
+              <label for="inputhaslo">Hasło:</label>
+                <div><input type="password" name="haslo" id="inputhaslo" placeholder="Super haslo">
+                  <input onclick="pokaz1()" class="pokazhaslo" type="checkbox" value="Pokaż hasło"></div><br><br>
+              <input type="button" value="Zaloguj" class="zaloguj" onclick="login2()">
+            </section>
+            <section class="dol">
+
+                <span class="register spany">Brak konta? <b>Zarejestruj się!</b></span>
+            </section>
+        </section>
+        <section class="rejestacjabox">
+          <h1>Rejestracja</h1>
+            <section class="gora">
+              <label for="inputnazwa2">Nazwa:</label>
+                <input type="text" name="nazwa" id="inputnazwa2" placeholder="Super nazwa"><br><br>
+              <label for="inputhaslo">Hasło:</label>
+                <input type="password" name="haslo" class="inputhaslo2" placeholder="Super haslo"><br>
+              <label for="inputhaslo">Powtórz hasło:</label>
+                <div><input type="password" name="haslo" class="inputhaslo2" placeholder="Super haslo">
+                  <input onclick="pokaz2()" class="pokazhaslo" type="checkbox"></div><br><br>
+              <input type="button" value="Zarejestruj" class="Zarejestruj" onclick="register2()">
+            </section>
+            <section class="dol">
+                <span class="login spany">Masz już konto? <b>Zaloguj się!</b></span>
+            </section>
+        </section>
+        </section>
+    </section>
+    <script>
+      var counter = JSON.parse(localStorage.getItem('counter'))
+
+      var nowe =document.querySelector('.Zarejestruj')
+      nowe.addEventListener('click',function(){
+        if(nazwa2.value!=""&&haslo2[0].value!=""&&haslo2[1].value!=""){
+          counter = counter + 1
+          window.localStorage.setItem('counter',counter)
+        }
+      })
+      var Zarejestruj = document.querySelector('.Zarejestruj')
+      var zaloguj = document.querySelector('.zaloguj')
+      var nazwa2 = document.querySelector('#inputnazwa2')
+
+      function register2(){
+      if(nazwa2.value!=""&&haslo2[0].value!=""&&haslo2[1].value!=""){
+
+      
+        if(haslo2[0].value==haslo2[1].value){
+
+          window.localStorage.setItem('nazwa_uzytkownika',JSON.stringify(nazwa2.value))
+          window.localStorage.setItem('haslo_uzytkownika',JSON.stringify(haslo2[1].value))
+        }
+        else{
+         alert('zle haslo')
+        }
+      }
+      else{
+        alert("podaj wszystkie dane")
+      }
+      }
+      var nazwa1 = document.querySelector('#inputnazwa')
+      function login2(){
+        if('"'+nazwa1.value+'"' == window.localStorage.nazwa_uzytkownika && '"'+haslo.value+'"' == window.localStorage.haslo_uzytkownika){
+          window.localStorage.setItem('czyzalogowano','tak')
+          window.location.replace('index.html')
+        }
+        else{
+          alert('zle dane')
+        }
+      }
+      
+    
+
+
+
+
+      var haslo = document.querySelector('#inputhaslo')
+      var pokazguzik = document.querySelector('.pokazhaslo')
+        function pokaz1(){
+          if(haslo.type =='password'){
+            haslo.type = 'text'
+          }
+          else{
+            haslo.type = 'password'
+          }
+        }
+        var haslo2 = document.getElementsByClassName('inputhaslo2')
+        function pokaz2(){
+          if(haslo2[1].type == 'password'|| haslo2[0].type == 'password'){
+            haslo2[1].type = 'text'
+            haslo2[0].type = 'text'
+          }
+          else{
+            haslo2[1].type = 'password'
+            haslo2[0].type = 'password'
+          }
+        }
+
+
+        var login = document.querySelector('.login')
+        var register = document.querySelector('.register')
+
+        var rejestacjabox = document.querySelector('.rejestacjabox')
+        var logowaniebox = document.querySelector('.logowaniebox')
+        window.addEventListener('load',function(){
+            
+            rejestacjabox.style.left = '0%'
+        })
+        login.addEventListener('click',function(){
+            rejestacjabox.style.left = '1000%'
+            logowaniebox.style.left = '0%'
+            rejestacjabox.style.width = '0%'
+            logowaniebox.style.width ='1000%'
+            rejestacjabox.style.visibility= 'hidden'
+            logowaniebox.style.visibility= 'visible'
+        })
+        register.addEventListener('click',function(){
+            logowaniebox.style.left = '-1000%'
+            rejestacjabox.style.left = '0%'
+            logowaniebox.style.width = '0%'
+            rejestacjabox.style.width = '1000%'
+            logowaniebox.style.visibility= 'hidden'
+            rejestacjabox.style.visibility= 'visible'
+        })
+
+
+    </script>
+</body>
+</html>

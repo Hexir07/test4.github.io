@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book of Faces</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <section class="profil_click">
+        <section class="profil_srodek">
+            <section class="profsidebar">
+                <section class="profsidebartitle">
+                    Ustawienia
+                </section>
+                <section class="profsidebarbuttons">
+                    <label class="switch">
+                        <input type="checkbox" id="czyciemno" value="true">
+                        <span class="slider round"></span>
+                      </label>
+                </section>
+                <section class="profsidebarbuttons">
+                    <section class="loginpage">Zaloguj</section>
+                </section>
+                <section class="profsidebarbuttons">
+                    Opcja 3
+                </section>
+                <section class="profsidebarbuttons">
+                    Opcja 4
+                </section>
+                <section class="profsidebarbuttons">
+                    Opcja 5
+                </section>
+            </section>
+            <section class="profoptions">
+                <section class="profoptionslist" id="opcja1"></section>
+                <section class="profoptionslist" id="opcja2"></section>
+                <section class="profoptionslist" id="opcja3"></section>
+                <section class="profoptionslist" id="opcja4"></section>
+                <section class="profoptionslist" id="opcja5"></section>
+                <section class="profoptionslist" id="opcja6"></section>
+                <section class="profoptionslist" id="opcja7"></section>
+                <section class="profoptionslist" id="opcja8"></section>
+                <section class="profoptionslist" id="opcja9"></section>
+            </section>
+        </section>
+    </section>
+    <header class="headbar">
+        <section class="upperhead"> <!-- GORNE -->
+            <section class="homebutton"></section>
+            <section class="searchbar">
+                <input class="searchbar_area" type="text" placeholder=" Search..">
+            </section>
+            <section class="nazwa_text"></section>
+            <section class="profile"><div class="div1"></div></section>
+        </section>
+    </header>
+    <main class="backgroundpage">
+        <section class="leftmenu">
+            <section class="leftmenu_option opt1">Twój Profil</section>
+            <section class="leftmenu_option">Znajdź znajomych</section>
+            <section class="leftmenu_option">Aktualności</section>
+            <section class="leftmenu_option">Wydarzenia</section>
+        </section>
+        <section class="center">
+            <section class="posts">
+                <section class="lowerhead"> <!-- KATEGORIE -->
+                    <section class="categories mainpageico">  
+                        <i class="fa-solid fa-house"></i>
+                    </section>
+                    <section class="categories friendspageico">
+                        <i class="fa-solid fa-user-group"></i>
+                    </section>
+                    <section class="categories videospageico">
+                        <i class="fa-solid fa-clapperboard"></i>
+                    </section>
+                    <section class="categories marketplaceico">
+                        <i class="fa-solid fa-shop"></i>
+                    </section>
+                    <section class="categories gamespageico">
+                        <i class="fa-solid fa-gamepad"></i>
+                    </section>
+                </section>
+
+                <section class="createpost"><a href="https://www.youtube.com/watch?v=T0pStRk1JzM">abc</a></section>
+                <section class="createstatus"></section>
+            </section>
+            
+            <section class="posty_frame">
+                <section class="wygenerowane_posty">
+
+                </section>
+                
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <script>
+        window.addEventListener('load',function(){
+            if(window.localStorage.czyzalogowano == 'tak'){
+                let dlugosc = localStorage.nazwa_uzytkownika.length
+                var nazwa = localStorage.nazwa_uzytkownika.slice(1,dlugosc-1)
+                
+                document.querySelector('.nazwa_text').innerHTML = nazwa
+            }
+        })
+    </script>
+
+
+
+
+    <script src="generacja_galeri.js"></script>
+    <script src="galeria.js"></script>
+    <script src="skrypt.js"></script>
+    
+
+
+    <script src="https://kit.fontawesome.com/dad25f1207.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+*{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+}
+body{
+  margin: 0;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(44, 43, 43);
+}
+.center{
+  height: 100vh;
+  background-color: rgb(58, 57, 57);
+  width: 30%;
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.logowaniebox{
+  width: 0%;
+  height: 55%;
+  background-color: rgba(94, 101, 207, 0.9);
+  transition: 0.7s all;
+  position: relative;
+  left: -1000%;
+  
+}
+h1{
+  color: white;
+  margin-left: 20px;
+  font-size: x-large;
+}
+
+.rejestacjabox{
+  width: 100%;
+  height: 55%;
+  background-color: rgba(94, 101, 207, 0.9);
+  transition: 0.7s all;
+  position: relative;
+  left: 1000%;
+}
+.gora{
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+.dol{
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+span{
+  cursor: pointer;
+}
+span b{
+  text-decoration: underline solid white;
+}
+.zaloguj{
+  width: 30%;
+  color: black;
+  background-color: white;
+  transition: all 0.2s;
+}
+.zaloguj:active{
+  background-color: rgb(209, 209, 209);
+  transition: all 0.2s;
+}
+.Zarejestruj{
+  width: 30%;
+  color: black;
+  background-color: white;
+  transition: all 0.2s;
+}
+.Zarejestruj:active{
+  background-color: rgb(209, 209, 209);
+  transition: all 0.2s;
+}
+.pokazhaslo{
+  width: 30%;
+  color: black;
+  background-color: white;
+  transition: all 0.2s;
+}
+.pokazhaslo:active{
+  background-color: rgb(209, 209, 209);
+  transition: all 0.2s;
+}
+div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 90px;
+}
+div .pokazhaslo{
+  position: relative;
+  left: -70px;
+}
+.powrot{
+  position: absolute;
+  left: 1vw;
+  top: 1vh;
+  height: 75px;
+  width: 75px;
+  font-size: large;
+  background-color: #ddd;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
