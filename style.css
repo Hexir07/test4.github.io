@@ -160,8 +160,30 @@ body{
     margin:1%;
     align-self: flex-end;
     pointer-events:auto; 
-    overflow: hidden;
+    color: rgb(255, 255, 255);
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+
+
 }
+.createpost_button{
+    width: 48px;
+    height: 48px;
+    background-color: #838586;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+.createstatus_button{
+    width: 48px;
+    height: 48px;
+    background-color: #838586;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
 .createstatus{
     width: 49%;
     background-color: var(--ciemny-2);
@@ -171,8 +193,12 @@ body{
     margin:1%;
     align-self: flex-end;
     pointer-events:auto; 
-    overflow: hidden;
-    visibility: visible
+    color: rgb(255, 255, 255);
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+
+
 }
 
 .lowerhead{
