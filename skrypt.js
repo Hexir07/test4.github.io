@@ -151,3 +151,37 @@
             if(cont_createstatus!==event.target)return;
             cont_createstatus.style.bottom = "-100%"
         })
+        
+        var createpost_button2 = document.querySelector('.createpost_button2')
+        
+        var mojeposty = document.getElementsByClassName('wygenerowane_posty')[0]
+        
+        createpost_button2.addEventListener('click',function(){
+            var post = document.createElement('li');
+            post.style.display = 'inline-block';
+            post.className = 'postbox'
+            mojeposty.appendChild(post);
+            
+            var postgora = document.createElement('section');
+            postgora.className = 'gora'
+            post.appendChild(postgora);
+
+            var zdjecie = document.createElement('img');
+            zdjecie.id = 'p'+i;
+            zdjecie.className = 'zdj_post';
+            postgora.appendChild(zdjecie);
+
+            var postdol = document.createElement('section');
+            postdol.className = 'dol';
+            post.appendChild(postdol);
+            
+
+            var ikonka = document.createElement('section');
+            ikonka.className = 'ikonka';
+            postdol.appendChild(ikonka);
+
+            var tytulpost = document.createElement('section');
+            tytulpost.className = 'tytulpost';
+            tytulpost.id = 'i'+i;
+            postdol.appendChild(tytulpost);
+        }) 

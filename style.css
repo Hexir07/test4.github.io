@@ -517,7 +517,7 @@ input:checked + .slider:before {
 .contener_createstatus{
     height: 100vh;
     width: 100vw;
-    background-color: rgba(255, 255, 255, 0.288);
+    background-color: rgba(0, 0, 0, 0.61);
     position: absolute;
     bottom: -100%;
     z-index: 8;

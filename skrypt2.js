@@ -59,9 +59,11 @@ function tytulpost(wartosc, i){
     tytul.innerHTML = wartosc
 }
 
+
 var choosertytul = randomNoRepeats(['tytul1','tytul2','tutel3','tytul4','maciek']);
 for (let i = 0; i < 35; i++) {
 tytulpost(choosertytul(), i)}
+
 
 
 

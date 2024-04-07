@@ -44,6 +44,13 @@
         </section>
     </section>
     <script>
+      var el = document.querySelector(".container");
+
+      el.addEventListener("mousemove", (e,event) => {
+        
+      el.style.setProperty('--x', - 0.95 *e.offsetX + "px");
+      el.style.setProperty('--y', - 0.95 *e.offsetY + "px");
+      });
       var counter = JSON.parse(localStorage.getItem('counter'))
 
       var nowe =document.querySelector('.Zarejestruj')

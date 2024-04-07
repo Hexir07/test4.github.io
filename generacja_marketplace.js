@@ -20,7 +20,7 @@ posty_frame.appendChild(test_lista)
                     post.appendChild(postgora);
         
                     var zdjecie = document.createElement('img');
-                    zdjecie.id = 'p'+i;
+                    zdjecie.id = 'p2'+i;
                     zdjecie.className = 'zdj_post';
                     postgora.appendChild(zdjecie);
         
@@ -33,10 +33,10 @@ posty_frame.appendChild(test_lista)
                     ikonka.className = 'ikonka';
                     postdol.appendChild(ikonka);
         
-                    var tytulpost = document.createElement('section');
-                    tytulpost.className = 'tytulpost';
-                    tytulpost.id = 'i'+i;
-                    postdol.appendChild(tytulpost);
+                    var tytulogl2 = document.createElement('section');
+                    tytulogl2.className = 'tytulpost';
+                    tytulogl2.id = 'o'+i;
+                    postdol.appendChild(tytulogl2);
         
                     var kontener_komentarzy = document.createElement('section')
                     kontener_komentarzy.className = 'kontener_komentarzy'
@@ -54,3 +54,34 @@ posty_frame.appendChild(test_lista)
                 powrot.className = 'powrot'
                 powrot.innerHTML = 'Powrót na góre'
                 posty_frame.appendChild(powrot)
+function randomNoRepeats(array) {
+  var copy = array.slice(0);
+  return function() {
+    if (copy.length < 1) { copy = array.slice(0); }
+    var index = Math.floor(Math.random() * copy.length);
+    var item = copy[index];
+    copy.splice(index, 1);
+    return item;
+  };
+}
+
+function tytulogl(wartosc2, i){
+
+    var tytul2 = document.getElementById('o'+ i )
+    tytul2.innerHTML = wartosc2
+}
+var ofery = ['Sprzedam','Do odebrania za darmo','mitsubishi sigma','bmw m3 2018','rower(za darmo)','550zl','2000zl']
+var choosertytul = randomNoRepeats(ofery);
+for (let i = 0; i < 35; i++) {
+tytulogl(choosertytul(), i)
+}
+function zdjeciepost(wartosc, i){
+    
+
+  var obraz = document.getElementById('p2'+ i )
+  obraz.style.content = 'url(' + wartosc + ')';
+}
+
+var chooser = randomNoRepeats(['rower.png', 'sigma.png', 'bmw.png','rower2.png','hulajnoga.png','krzeslo.png']);
+for (let i = 0; i < 35; i++) {
+zdjeciepost(chooser(), i)}
