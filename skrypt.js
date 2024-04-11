@@ -135,10 +135,61 @@
         var createstatus = document.querySelector('.createstatus_button')
         var createstatus_box =document.querySelector('.createstatus_box')
         var cont_createstatus = document.querySelector('.contener_createstatus')
+        var zdjecialista = ['adik.png', 'dawid.png', 'jojo.png','nikus.png','seba.png','sledz.png']
+        var wyborzdj = document.querySelector('.wyborzdj')
+        var selector = '.wybrozdjoptions'
+        window.addEventListener('load',function(){
+            
+            
+            for(let i = 0; i < zdjecialista.length;i++){
+                
+                var listanadzdj = this.document.createElement('li')
+                listanadzdj.className='listanadzdj'
+                
 
+                var wybrozdjoptions = document.createElement('img')
+                wybrozdjoptions.className = 'wybrozdjoptions'
+                wybrozdjoptions.style.content = 'url(' + zdjecialista[i] + ')'
+                wybrozdjoptions.id = 'wybranezdj'+i
+                
+                listanadzdj.appendChild(wybrozdjoptions)
+                wyborzdj.appendChild(listanadzdj)
+                
+                
+            }
+            
+            
+            for (var item of document.querySelectorAll(".listanadzdj")) {
+                item.addEventListener("click", function (evt) {
+                    let test6 = document.querySelectorAll('.wybrozdjoptions.wybrane_zdj')
+                    if(test6.length<1){
+
+                    if(!evt.target.classList.contains("wybrane_zdj")){
+                        evt.target.classList.add("wybrane_zdj")}
+                    else{
+                        evt.target.classList.remove("wybrane_zdj")
+                    }}
+                    else if(test6.length){
+                        document.querySelectorAll(".wybrozdjoptions").forEach(element => {
+                            element.classList.remove("wybrane_zdj")
+                        });
+                        evt.target.classList.add("wybrane_zdj")
+                    }
+                }, false);
+               }
+            
+            
+            
+
+
+
+        })
+        
 
         createpost.addEventListener('click',function(){
             cont_createpost.style.bottom = "0%"
+            
+            
         })
         cont_createpost.addEventListener('click',function(event){
             if(cont_createpost!==event.target)return;
@@ -151,12 +202,14 @@
             if(cont_createstatus!==event.target)return;
             cont_createstatus.style.bottom = "-100%"
         })
+
+        var tytulmojego = document.querySelector('#post_title')
         
         var createpost_button2 = document.querySelector('.createpost_button2')
         
-        var mojeposty = document.getElementsByClassName('wygenerowane_posty')[0]
+        var mojeposty = document.querySelector('.wygenerowane_posty')
         
-        createpost_button2.addEventListener('click',function(){
+        createpost_button2.addEventListener('click',function(i){
             var post = document.createElement('li');
             post.style.display = 'inline-block';
             post.className = 'postbox'
@@ -167,7 +220,7 @@
             post.appendChild(postgora);
 
             var zdjecie = document.createElement('img');
-            zdjecie.id = 'p'+i;
+            zdjecie.id = 'pm'+ mojeposty.childElementCount;
             zdjecie.className = 'zdj_post';
             postgora.appendChild(zdjecie);
 
@@ -182,6 +235,18 @@
 
             var tytulpost = document.createElement('section');
             tytulpost.className = 'tytulpost';
-            tytulpost.id = 'i'+i;
+            tytulpost.id = 'im'+i;
             postdol.appendChild(tytulpost);
+
+
+            
+
+            tytulpost.innerHTML = tytulmojego.value
+            function zdjeciepost(wartosc){
+                var obraz = document.getElementById('pm'+mojeposty.childElementCount)
+                obraz.style.content = wartosc
+                }
+        
+                let wybrane = document.querySelector('.wybrane_zdj').style.content
+                zdjeciepost(wybrane)
         }) 

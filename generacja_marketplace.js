@@ -82,6 +82,6 @@ function zdjeciepost(wartosc, i){
   obraz.style.content = 'url(' + wartosc + ')';
 }
 
-var chooser = randomNoRepeats(['rower.png', 'sigma.png', 'bmw.png','rower2.png','hulajnoga.png','krzeslo.png']);
+var chooser = randomNoRepeats(['rower.png', 'sigma.png', 'bmw.png','rower2.png','hulajnoga.png','krzeslo.png','rower3.png']);
 for (let i = 0; i < 35; i++) {
 zdjeciepost(chooser(), i)}
