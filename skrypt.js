@@ -250,3 +250,19 @@
                 let wybrane = document.querySelector('.wybrane_zdj').style.content
                 zdjeciepost(wybrane)
         }) 
+
+
+
+        var ToProfilePage = document.querySelector('.opt1')
+
+        ToProfilePage.addEventListener('click',function(){
+            if(window.localStorage.czyzalogowano == 'tak'){
+                window.location.replace('profile.html')
+            }
+            else {
+                alert('Brak konta / Nie zalogowano')
+            }
+        })
+
+
+        

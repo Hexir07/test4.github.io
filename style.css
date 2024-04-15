@@ -579,3 +579,110 @@ input:checked + .slider:before {
 .listanadzdj{
     display: flex;
 }
+.leftmenu_option{
+    cursor: pointer;
+}
+.MyProfGora{
+    width: 100%;
+    background-color: #555555;
+    height: 30%;
+    display: flex;
+}
+.friendscounter{
+    position:relative;
+    top: 220px;
+    left: -180px;
+    color: #f2f2f2;
+}
+.MyProfDol{
+    width: 100%;
+    background-color: #555555;
+    height: 600px;
+    margin-top: 10px;
+    display: flex;
+   overflow: hidden; 
+}
+.ProfPicture{
+    background-color: #4d4949;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    margin: 12px;
+    min-width: 170px;
+}
+.ProfDivider{
+    width: 75%;
+    height: 250px;
+    background-color: #686868;
+    margin-left: 55px;
+    overflow: hidden
+}
+.ProfName{
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    font-size: larger;
+    padding: 10px;
+    color: white;
+}
+.ProfBio{
+    width: 100%;
+    height: 160px;
+    background-color: #505050;
+    margin-top: 15px;
+    padding: 10px;
+}
+.Bio{
+    width: 300px;
+    height: 120px;
+    resize: none;
+}
+.ZapisBio{
+    width: 70px;
+    height: 30px;
+    position: relative;
+    top: -107px;
+}
+.EditBio{
+    width: 70px;
+    height: 30px;
+    position: relative;
+    left:20px
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  display: block;
+}
+.mySlides {
+  display: none;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.test2{
+    width: 100%;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book of Faces</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <section class="profil_click">
+        <section class="profil_srodek">
+            <section class="profsidebar">
+                <section class="profsidebartitle">
+                    Ustawienia
+                </section>
+                <section class="profsidebarbuttons">
+                    <label class="switch">
+                        <input type="checkbox" id="czyciemno" value="true">
+                        <span class="slider round"></span>
+                      </label>
+                </section>
+                <section class="profsidebarbuttons">
+                    <section class="loginpage">Zaloguj</section>
+                </section>
+                <section class="profsidebarbuttons">
+                    Opcja 3
+                </section>
+                <section class="profsidebarbuttons">
+                    Opcja 4
+                </section>
+                <section class="profsidebarbuttons">
+                    Opcja 5
+                </section>
+            </section>
+            <section class="profoptions">
+                <section class="profoptionslist" id="opcja1"></section>
+                <section class="profoptionslist" id="opcja2"></section>
+                <section class="profoptionslist" id="opcja3"></section>
+                <section class="profoptionslist" id="opcja4"></section>
+                <section class="profoptionslist" id="opcja5"></section>
+                <section class="profoptionslist" id="opcja6"></section>
+                <section class="profoptionslist" id="opcja7"></section>
+                <section class="profoptionslist" id="opcja8"></section>
+                <section class="profoptionslist" id="opcja9"></section>
+            </section>
+        </section>
+    </section>
+    <header class="headbar">
+        <section class="upperhead"> <!-- GORNE -->
+            <section class="homebutton"></section>
+            <section class="searchbar" style="visibility: hidden;">
+                <input class="searchbar_area" type="text" placeholder=" Search..">
+            </section>
+            <section class="nazwa_text"></section>
+            <section class="profile"><div class="div1"></div></section>
+        </section>
+    </header>
+    <main class="backgroundpage">
+        <section class="leftmenu">
+            <section class="leftmenu_option opt1">Twój Profil</section>
+            <section class="leftmenu_option">Znajdź znajomych</section>
+            <section class="leftmenu_option">Aktualności</section>
+            <section class="leftmenu_option">Wydarzenia</section>
+        </section>
+        <section class="center">
+            <section class="MyProfGora">
+                    <section class="ProfPicture"></section>
+                    <section class="friendscounter">
+                        Liczba znajomych
+                    </section>
+                <section class="ProfDivider">
+                    <section class="ProfName"></section>
+                    <section class="ProfBio"><label class="test-label"></label>
+                        <textarea class="Bio"></textarea>
+                        <input type="button" value="Zapisz" class="ZapisBio" onclick="ZapisBio()">
+                        <input type="button" value="Edytuj" class="EditBio" onclick="EditBio()">
+                    </section>
+                </section>
+            </section>
+            <section class="MyProfDol">
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides">
+                      <div class="numbertext">1 / 4</div>
+                      <img src="hulajnoga.png" class="test2">
+                      
+                    </div>
+                  
+                    <div class="mySlides">
+                      <div class="numbertext">2 / 4</div>
+                      <img src="bmw.png"class="test2">
+                      
+                    </div>
+                  
+                    <div class="mySlides">
+                      <div class="numbertext">3 / 4</div>
+                      <img src="sigma.png" class="test2">
+                      
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="krzeslo.png" class="test2">
+                        
+                    </div>
+                  
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  
+                  
+                  
+            </section>
+        </section>
+
+    </main>
+    <script>
+        var liczba_znaj = document.querySelector('.friendscounter')
+window.addEventListener('load',function(){
+    if(window.localStorage.getItem('liczba_znaj')!=null){
+        liczba_znaj.innerHTML = 'Liczba znajomych: ' + window.localStorage.getItem('liczba_znaj')
+    }
+    else{
+        window.localStorage.setItem('liczba_znaj',0)
+    }
+})
+
+
+
+        window.addEventListener('load',function(){
+            if(window.localStorage.czyzalogowano == 'tak'){
+                let dlugosc = localStorage.nazwa_uzytkownika.length
+                var nazwa = localStorage.nazwa_uzytkownika.slice(1,dlugosc-1)
+                
+                document.querySelector('.nazwa_text').innerHTML = nazwa
+                document.querySelector('.ProfName').innerHTML = nazwa
+            }
+        })
+        var myProf = document.querySelector('.opt1')
+        myProf.addEventListener('click',function(){
+            window.location.replace('profile.html')
+        })
+        var BioText = document.querySelector('.Bio')
+        var ButtonBio = document.querySelector('.ZapisBio')
+        var EditButton = document.querySelector('.EditBio')
+        var Bio = document.querySelector('.ProfBio')
+        var Label = document.querySelector('.test-label')
+
+        window.addEventListener('DOMContentLoaded',function(){
+            if(window.localStorage.getItem('Bio')!=null){
+                Label.innerHTML = window.localStorage.getItem('Bio')
+                BioText.value = Label.innerHTML
+                EditButton.style.display = 'unset'
+                Label.style.display = 'unset'
+                BioText.style.display = 'none'
+                ButtonBio.style.display = 'none'
+                
+
+            }
+            else{
+                EditButton.style.display = 'none'
+                ButtonBio.style.display = 'unset'
+            }
+        })
+
+        function ZapisBio(){
+            let zapisane = BioText.value
+            window.localStorage.setItem('Bio',zapisane)
+            Label.style.display = 'unset'
+            Label.innerHTML = zapisane
+            BioText.style.display = 'none'
+            ButtonBio.style.display = 'none'
+            EditButton.style.display = 'unset'
+            
+        }
+
+        function EditBio(){
+            Label.style.display = 'none'
+            BioText.style.display = 'unset'
+            ButtonBio.style.display = 'unset'
+            EditButton.style.display = 'none'
+            BioText.value = zapisane
+            
+
+        }
+
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+
+
+
+
+    <script src="generacja_postow.js"></script>
+    <script src="skrypt.js"></script>
+    <script src="skrypt2.js"></script>
+    
+
+
+    <script src="https://kit.fontawesome.com/dad25f1207.js" crossorigin="anonymous"></script>
+</body>
+</html>
