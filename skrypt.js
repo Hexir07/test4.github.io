@@ -61,10 +61,10 @@
     
 
         window.addEventListener('load', function(){
-            if(window.localStorage.getItem('theme') == 'dark'){
+            if(window.localStorage.getItem('theme') == 'light'){
                 ciemno()
             }
-            else if(window.localStorage.getItem('theme') == 'light'){
+            else if(window.localStorage.getItem('theme') == 'dark'){
                 jasno()
             }
         })
