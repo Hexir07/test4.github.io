@@ -61,23 +61,23 @@
     
 
         window.addEventListener('load', function(){
-            if(window.localStorage.getItem('theme') == 'light'){
-                ciemno()
-            }
-            else if(window.localStorage.getItem('theme') == 'dark'){
+            if(window.localStorage.getItem('theme') == 'dark'){
                 jasno()
+            }
+            else if(window.localStorage.getItem('theme') == 'light'){
+                ciemno()
             }
         })
         
        
         checkbox.addEventListener('change',function(){
             if(window.localStorage.getItem('theme') == 'dark') {
-                jasno()
+                ciemno()
                 window.localStorage.setItem('theme','light')
             }
             else if(window.localStorage.getItem('theme') == 'light'){
                 
-                ciemno()
+                jasno()
                 window.localStorage.setItem('theme','dark')
             }
         })
