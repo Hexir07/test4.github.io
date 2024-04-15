@@ -202,6 +202,7 @@
             if(cont_createstatus!==event.target)return;
             cont_createstatus.style.bottom = "-100%"
         })
+        
 
         var tytulmojego = document.querySelector('#post_title')
         
@@ -265,4 +266,22 @@
         })
 
 
+
+        var ToUpdatesPage = document.querySelector('.opt2')
+        var updatescont = document.querySelector('.updates_popup')
+
+        ToUpdatesPage.addEventListener('click',function(){
+            updatescont.style.top = "0%"
+
+            document.querySelector('.updates').innerHTML = '<a href="https://21awi.github.io/Y2.github.io/">Strona Dawida</a>'
+        })
         
+        
+
+
+
+    
+        updatescont.addEventListener('click',function(event){
+            if(updatescont!==event.target)return;
+            updatescont.style.top = "-100%"
+        })
