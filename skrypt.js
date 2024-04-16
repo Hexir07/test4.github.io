@@ -205,13 +205,20 @@
         
 
         var tytulmojego = document.querySelector('#post_title')
+        let dlugosc_tytul = document.querySelector('#post_title').value.length
+
+       
+        
+
+
+
         
         var createpost_button2 = document.querySelector('.createpost_button2')
         
         var mojeposty = document.querySelector('.wygenerowane_posty')
         
         createpost_button2.addEventListener('click',function(i){
-
+            if(tytulmojego.length<61){
             var post = document.createElement('li');
             
             post.style.display = 'inline-block';
@@ -244,8 +251,14 @@
 
 
             
+            
 
-            tytulpost.innerHTML = tytulmojego.value
+
+            
+                tytulpost.innerHTML = tytulmojego.value
+            
+            
+            
             function zdjeciepost(wartosc){
                 var obraz = document.getElementById('pm'+mojeposty.childElementCount)
                 obraz.style.content = wartosc
@@ -253,8 +266,12 @@
         
                 let wybrane = document.querySelector('.wybrane_zdj').style.content
                 zdjeciepost(wybrane)
-        }) 
+            }else{
+                alert('tytuł jest za długi')
 
+            }
+        }) 
+        
 
 
         var ToProfilePage = document.querySelector('.opt1')
@@ -287,4 +304,9 @@
         updatescont.addEventListener('click',function(event){
             if(updatescont!==event.target)return;
             updatescont.style.top = "-100%"
+        })
+
+
+        tytulmojego.addEventListener('keyup',function(){
+            document.querySelector('#character_limit').innerHTML = 60 - this.value.length + '/ 60'
         })

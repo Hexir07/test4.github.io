@@ -714,3 +714,7 @@ input:checked + .slider:before {
 .test-label{
     word-wrap: break-word;
 }
+.character_limit{
+    width: 50px;
+    height: 50px;
+}
