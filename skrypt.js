@@ -211,10 +211,13 @@
         var mojeposty = document.querySelector('.wygenerowane_posty')
         
         createpost_button2.addEventListener('click',function(i){
+
             var post = document.createElement('li');
+            
             post.style.display = 'inline-block';
             post.className = 'postbox'
             mojeposty.appendChild(post);
+            post = mojeposty.insertBefore(post,mojeposty.firstElementChild)
             
             var postgora = document.createElement('section');
             postgora.className = 'gora'
