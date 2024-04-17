@@ -135,12 +135,13 @@
         var createstatus = document.querySelector('.createstatus_button')
         var createstatus_box =document.querySelector('.createstatus_box')
         var cont_createstatus = document.querySelector('.contener_createstatus')
-        var zdjecialista = ['adik.png', 'dawid.png', 'jojo.png','nikus.png','seba.png','sledz.png']
+        var zdjecialista = ['kubus.jpg','adik.png', 'dawid.png', 'jojo.png','nikus.png','seba.png','sledz.png']
+        var marketplacelista = ['rower.png', 'sigma.png', 'bmw.png','rower2.png','hulajnoga.png','krzeslo.png','rower3.png']
         var wyborzdj = document.querySelector('.wyborzdj')
         var selector = '.wybrozdjoptions'
         window.addEventListener('load',function(){
             
-            
+            if(window.location.href.substring(document.location.href.lastIndexOf("/")+1, document.location.href.length)!='marketplace.html'){
             for(let i = 0; i < zdjecialista.length;i++){
                 
                 var listanadzdj = this.document.createElement('li')
@@ -178,8 +179,45 @@
                 }, false);
                }
             
-            
-            
+            }
+            else{
+                for(let i = 0; i < marketplacelista.length;i++){
+                
+                    var listanadzdj2 = document.createElement('li')
+                    listanadzdj2.className='listanadzdj2'
+                    
+    
+                    var wybrozdjoptions2 = document.createElement('img')
+                    wybrozdjoptions2.className = 'wybrozdjoptions'
+                    wybrozdjoptions2.style.content = 'url(' + marketplacelista[i] + ')'
+                    wybrozdjoptions2.id = 'wybranezdj2'+i
+                    
+                    listanadzdj2.appendChild(wybrozdjoptions2)
+                    wyborzdj.appendChild(listanadzdj2)
+                    
+                    
+                }
+                
+                
+                for (var item of document.querySelectorAll(".listanadzdj2")) {
+                    item.addEventListener("click", function (evt) {
+                        let test6 = document.querySelectorAll('.wybrozdjoptions.wybrane_zdj2')
+                        if(test6.length<1){
+    
+                        if(!evt.target.classList.contains("wybrane_zdj2")){
+                            evt.target.classList.add("wybrane_zdj2")}
+                        else{
+                            evt.target.classList.remove("wybrane_zdj2")
+                        }}
+                        else if(test6.length){
+                            document.querySelectorAll(".wybrozdjoptions").forEach(element => {
+                                element.classList.remove("wybrane_zdj2")
+                            });
+                            evt.target.classList.add("wybrane_zdj2")
+                        }
+                    }, false);
+                   }
+                }
 
 
 
@@ -218,7 +256,7 @@
         var mojeposty = document.querySelector('.wygenerowane_posty')
         
         createpost_button2.addEventListener('click',function(i){
-            if(tytulmojego.length<61){
+            if(tytulmojego.value.length<61){
             var post = document.createElement('li');
             
             post.style.display = 'inline-block';
@@ -258,14 +296,19 @@
                 tytulpost.innerHTML = tytulmojego.value
             
             
-            
+                cont_createstatus.style.bottom = "-100%"
             function zdjeciepost(wartosc){
                 var obraz = document.getElementById('pm'+mojeposty.childElementCount)
                 obraz.style.content = wartosc
                 }
-        
+                if(window.location.href.substring(document.location.href.lastIndexOf("/")+1, document.location.href.length)!='marketplace.html'){
                 let wybrane = document.querySelector('.wybrane_zdj').style.content
-                zdjeciepost(wybrane)
+                zdjeciepost(wybrane)}
+                else{
+                    let wybrane = document.querySelector('.wybrane_zdj2').style.content
+                    zdjeciepost(wybrane)
+                }
+                
             }else{
                 alert('tytuł jest za długi')
 
@@ -310,3 +353,25 @@
         tytulmojego.addEventListener('keyup',function(){
             document.querySelector('#character_limit').innerHTML = 60 - this.value.length + '/ 60'
         })
+
+        
+        function sprawdz(){
+            var prof = document.querySelector('.ProfPicture')
+        
+        if(document.getElementById('current_status1').checked) {
+            
+            document.querySelector('.ProfPicture').style.border = '6px solid greenyellow'
+        }
+        else if(document.getElementById('current_status2').checked) {
+            
+            document.querySelector('.ProfPicture').style.border = '6px solid yellow'
+        }
+        else if(document.getElementById('current_status3').checked) {
+            document.querySelector('.ProfPicture').style.border = '6px solid red'
+            
+        }
+        else if(document.getElementById('current_status4').checked) {
+            document.querySelector('.ProfPicture').style.border = '6px solid gray'
+            
+        }
+    }

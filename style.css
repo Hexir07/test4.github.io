@@ -594,18 +594,28 @@ input:checked + .slider:before {
     height: 150px;
     overflow-x: scroll;
     display: flex;
+    max-width: 2000px;
+
 }
 .wybrozdjoptions{
     height: 100%;
-    width: 100%;
 }
 .wybrane_zdj{
+    opacity: 30%;
+    background-color: #ffffff;
+}
+.wybrane_zdj2{
     opacity: 30%;
     background-color: #ffffff;
 }
 
 .listanadzdj{
     display: flex;
+    width: 100%
+}
+.listanadzdj2{
+    display: flex;
+    
 }
 .leftmenu_option{
     cursor: pointer;
@@ -637,13 +647,24 @@ input:checked + .slider:before {
     border-radius: 50%;
     margin: 12px;
     min-width: 170px;
+    border: 6px solid greenyellow;
 }
 .ProfDivider{
-    width: 75%;
+    width: 1200px;
     height: 250px;
     background-color: #686868;
     margin-left: 55px;
     overflow: hidden
+}
+.current_status{
+    margin-top: 200px;
+    height: 100px;
+    color: white;
+    padding: 2px;
+    background-color: #83858618;
+}
+.current_status input{
+    margin-bottom: 10px;
 }
 .ProfName{
     width: 100%;

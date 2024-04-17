@@ -37,7 +37,7 @@ function filmpost(wartosc, i){
         film.src = wartosc
         film.type="video/mp4"
 }
-var chooser = randomNoRepeats(['yoda.mp4','artysta.mkv']);
+var chooser = randomNoRepeats(['yoda.mp4','artysta.mkv','homik.mp4','letme.mp4','slawek.mp4']);
 for (let i = 0; i < 35; i++) {
 filmpost(chooser(), i)}
 
