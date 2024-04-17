@@ -648,6 +648,7 @@ input:checked + .slider:before {
     margin: 12px;
     min-width: 170px;
     border: 6px solid greenyellow;
+    
 }
 .ProfDivider{
     width: 1200px;

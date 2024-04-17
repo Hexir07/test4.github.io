@@ -356,7 +356,6 @@
 
         
         function sprawdz(){
-            var prof = document.querySelector('.ProfPicture')
         
         if(document.getElementById('current_status1').checked) {
             
