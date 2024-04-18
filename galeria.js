@@ -71,7 +71,7 @@ for (let j = 0; j < 35; j++) {
             var komenatrz = document.getElementById('p'+ i +'k' + k)
             komenatrz.innerHTML = wartosc
     }
-    var chooser_komentarzy = randomNoRepeats(['mega post!','spoko','test1','test2','test3'])
+    var chooser_komentarzy = randomNoRepeats(['gilu choc zrob stronke','skibidi','mega post!','spoko','test1','test2','test3'])
     for (let j = 0; j < 35; j++) {
         for (let k = 0; k < 3; k++) {
             komentarzpost(chooser_komentarzy(), j , k)
@@ -83,6 +83,6 @@ for (let j = 0; j < 35; j++) {
         tytul.innerHTML = wartosc
     }
     
-    var choosertytul = randomNoRepeats(['tytul1','tytul2','tutel3','tytul4','maciek']);
+    var choosertytul = randomNoRepeats(['oceni pani spoko logowanko???','abc','testowe4','nowy post','tytul1','tytul2','tutel3','tytul4','maciek']);
     for (let i = 0; i < 35; i++) {
     tytulpost(choosertytul(), i)}
