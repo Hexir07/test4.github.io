@@ -37,7 +37,7 @@ function zdjeciepost(wartosc, i){
         obraz.style.content = 'url(' + wartosc + ')';
 }
 
-var chooser = randomNoRepeats(['kubus.jpg','adik.png', 'dawid.png', 'jojo.png','nikus.png','seba.png','sledz.png']);
+var chooser = randomNoRepeats(['bruh.jpg','bestia.png','hmm.jpg','kubus.jpg','adik.png', 'dawid.png', 'jojo.png','nikus.png','seba.png','sledz.png']);
 for (let i = 0; i < 35; i++) {
 zdjeciepost(chooser(), i)}
 

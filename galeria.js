@@ -30,7 +30,7 @@ function randomNoRepeats(array) {
       return item;
     };
   }
-  var chooser = randomNoRepeats(['kubus.jpg','adik.png', 'dawid.png', 'jojo.png','nikus.png','seba.png','sledz.png']);
+  var chooser = randomNoRepeats(['bruh.jpg','bestia.png','hmm.jpg','kubus.jpg','adik.png', 'dawid.png', 'jojo.png','nikus.png','seba.png','sledz.png']);
   var caseoh = (['caseoh1.png','caseoh2.png','caseoh3.png','caseoh4.png','caseoh5.png',])
   function galeria(wartosc, i, k){
     

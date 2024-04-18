@@ -374,3 +374,67 @@
             
         }
     }
+
+
+
+    document.querySelector('.opener').addEventListener('click',function(){
+        
+        if(document.querySelector('.grupy').style.height != '30px'){
+            document.querySelector('.grupy').style.height = '30px'
+            
+        }
+        else{
+            document.querySelector('.grupy').style.height = '340px' 
+        }
+    })
+    document.querySelector('.group_title').addEventListener('click',function(){
+        
+        if(document.querySelector('.open_group').style.height != '30px'){
+            document.querySelector('.open_group').style.height = '30px'
+            
+        }
+        else{
+            document.querySelector('.open_group').style.height = '340px' 
+        }
+    })
+
+
+
+    var listagrup = document.querySelectorAll('.grupa')
+
+    listagrup.forEach(element =>
+        element.addEventListener('click',function(){
+
+            if(element.textContent==document.querySelector('.group_title').innerHTML || document.querySelector('.group_title').innerHTML==''){
+            if(document.querySelector('.grupy').style.width != '50px'){
+                document.querySelector('.open_group').className = 'open_group ' + element.textContent
+            document.querySelector('.grupy').style.width = '50px'
+            document.querySelector('.open_group').style.bottom = '0px'
+            document.querySelector('.group_title').innerHTML = element.textContent
+            element.children[1].classList.remove('nieprzeczytane')
+        }
+            else{
+                document.querySelector('.grupy').style.width = '290px'
+                document.querySelector('.open_group').style.bottom = '-340px'
+            }
+        }
+        else if(element.innerHTML!=document.querySelector('.group_title').innerHTML){
+                document.querySelector('.group_title').innerHTML = element.textContent
+                document.querySelector('.open_group').className = 'open_group ' + element.textContent
+                element.classList.remove('nieprzeczytane')
+        }     
+        }))
+
+
+    var guzik_group = document.getElementById('button_sent_message')
+    var group_message = document.getElementById('group_message_id')
+    var contener_wiadomosci = document.querySelector('.grupa_srodek')
+    guzik_group.addEventListener('click',function(){
+        if(group_message.value!=''){
+        var wiadomosc =  document.createElement('section')
+        wiadomosc.textContent = group_message.value
+        wiadomosc.className = 'wiadomosc'
+        group_message.value = ''
+        contener_wiadomosci.appendChild(wiadomosc)
+    }
+    })
