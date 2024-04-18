@@ -857,3 +857,31 @@ input:checked + .slider:before {
     font-size: large;
     color: rgb(255, 255, 255);
 }
+.kontakty{
+    width: 290px;
+    height: 400px;
+    background-color: #303030;
+    position: absolute;
+    right: 30px;
+    top: 80px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.kontakt_example{
+    height: 14.2%;
+    width: 96.4%;
+    border-bottom: 1px solid white;
+    padding: 5px;
+    display: flex;
+    color: white;
+}
+.kontakt_example div{
+ margin-left: 20px;
+ margin-top: 23px
+}
+.kontakt_prof{
+    height: 52px;
+    width: 52px;
+    background-color: #464646;
+    border-radius: 50%;
+}
