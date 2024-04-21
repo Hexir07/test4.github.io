@@ -34,14 +34,14 @@ function randomNoRepeats(array) {
   var caseoh = (['caseoh1.png','caseoh2.png','caseoh3.png','caseoh4.png','caseoh5.png',])
   function galeria(wartosc, i, k){
     
-    console.log(wartosc)
+    
     var zdjeciegaleria = document.getElementById('g'+i+'z'+k)
     zdjeciegaleria.style.content = 'url(' + wartosc + ')';
 }
 for (let j = 0; j < 35; j++) {
     for (let k = 0; k < 5; k++) {
         
-        if(j !== 24){
+        if(j != 24){
             galeria(chooser(), j , k)
         }
         else{
@@ -86,3 +86,63 @@ for (let j = 0; j < 35; j++) {
     var choosertytul = randomNoRepeats(['oceni pani spoko logowanko???','abc','testowe4','nowy post','tytul1','tytul2','tutel3','tytul4','maciek']);
     for (let i = 0; i < 35; i++) {
     tytulpost(choosertytul(), i)}
+
+
+
+
+
+    var slide_tyl = document.querySelectorAll('.slide_tyl')
+    var slide_przod = document.querySelectorAll('.slide_przod')
+    var galeria3 = document.querySelectorAll('.galeria')
+
+
+    function slide1(i){
+        for (let i = 0; i < 35; i++) {
+            if(galeria3[i].childNodes[0].classList.contains('widoczne_zdjecie')){
+                galeria3[i].childNodes[0].classList.remove('widoczne_zdjecie')
+                galeria3[i].childNodes[1].classList.add('widoczne_zdjecie')
+            }
+            else if(galeria3[i].childNodes[1].classList.contains('widoczne_zdjecie')){
+                galeria3[i].childNodes[1].classList.remove('widoczne_zdjecie')
+                galeria3[i].childNodes[2].classList.add('widoczne_zdjecie')
+            }
+            else if(galeria3[i].childNodes[2].classList.contains('widoczne_zdjecie')){
+                galeria3[i].childNodes[2].classList.remove('widoczne_zdjecie')
+                galeria3[i].childNodes[3].classList.add('widoczne_zdjecie')
+            }
+            else if(galeria3[i].childNodes[3].classList.contains('widoczne_zdjecie')){
+                galeria3[i].childNodes[3].classList.remove('widoczne_zdjecie')
+                galeria3[i].childNodes[4].classList.add('widoczne_zdjecie')
+            }
+            else if(galeria3[i].childNodes[4].classList.contains('widoczne_zdjecie')){
+                galeria3[i].childNodes[4].classList.remove('widoczne_zdjecie')
+                galeria3[i].childNodes[0].classList.add('widoczne_zdjecie')
+            }
+            
+        }
+    }
+    function slide2(i){
+        for (let i = 0; i < 35; i++) {
+            if(galeria3[i].childNodes[0].classList.contains('widoczne_zdjecie')){
+                galeria3[i].childNodes[0].classList.remove('widoczne_zdjecie')
+                galeria3[i].childNodes[4].classList.add('widoczne_zdjecie')
+            }
+            else if(galeria3[i].childNodes[4].classList.contains('widoczne_zdjecie')){
+                galeria3[i].childNodes[4].classList.remove('widoczne_zdjecie')
+                galeria3[i].childNodes[3].classList.add('widoczne_zdjecie')
+            }
+            else if(galeria3[i].childNodes[3].classList.contains('widoczne_zdjecie')){
+                galeria3[i].childNodes[3].classList.remove('widoczne_zdjecie')
+                galeria3[i].childNodes[2].classList.add('widoczne_zdjecie')
+            }
+            else if(galeria3[i].childNodes[2].classList.contains('widoczne_zdjecie')){
+                galeria3[i].childNodes[2].classList.remove('widoczne_zdjecie')
+                galeria3[i].childNodes[1].classList.add('widoczne_zdjecie')
+            }
+            else if(galeria3[i].childNodes[1].classList.contains('widoczne_zdjecie')){
+                galeria3[i].childNodes[1].classList.remove('widoczne_zdjecie')
+                galeria3[i].childNodes[0].classList.add('widoczne_zdjecie')
+            }
+            
+        }
+    }

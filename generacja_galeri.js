@@ -23,19 +23,35 @@ posty_frame.appendChild(test_lista)
                     galeria2.className = 'galeria';
                     postgora.appendChild(galeria2);
 
+                    var slide_tyl = document.createElement('section')
+                    slide_tyl.className = 'slide_tyl'
+                    slide_tyl.innerHTML = "<"
+                    slide_tyl.id = 'st'+i
+                    slide_tyl.setAttribute("onclick","slide2()")
+                    postgora.appendChild(slide_tyl)
+
+                    var slide_przod = document.createElement('section')
+                    slide_przod.className = 'slide_przod'
+                    slide_przod.innerHTML = ">"
+                    slide_przod.id = 'sp'+i
+                    slide_przod.setAttribute("onclick","slide1()")
+                    
+                    postgora.appendChild(slide_przod)
                     for (let z = 0; z < 5; z++) {
                     
                         
                         var zdjecie_galeria = document.createElement('img');
                         zdjecie_galeria.className= 'zdjeciegaleria';
                         zdjecie_galeria.id = 'g'+ i + 'z'+ z;
-                        
+
                         
 
 
                         galeria2.appendChild(zdjecie_galeria)[i]
                     }
-        
+                    
+                        document.querySelector('#g'+i+'z0').classList.add('widoczne_zdjecie')
+                    
                     
 
                     var postdol = document.createElement('section');
@@ -65,10 +81,10 @@ posty_frame.appendChild(test_lista)
                     }  
                     
         
-
+                    
                     
                 }
                 powrot.className = 'powrot'
                 powrot.innerHTML = 'Powrót na góre'
                 posty_frame.appendChild(powrot)
-            
+                

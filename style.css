@@ -885,3 +885,29 @@ input:checked + .slider:before {
     background-color: #464646;
     border-radius: 50%;
 }
+.slide_tyl{
+    width: 30px;
+    height: 40px;
+    background-color: black;
+    top: -225px;
+    position: relative;
+    opacity: 0.5;
+    color: white;
+    font-size: 2.3rem;
+    padding: 5px;
+    cursor: pointer;
+}
+.slide_przod{
+    width: 27px;
+    height: 40px;
+    background-color: black;
+    top: -225px;
+    position: relative;
+    opacity: 0.5;
+    color: white;
+    font-size: 2.3rem;
+    padding: 5px;
+    right: -744px;
+    cursor: pointer;
+    padding-left: 13px;
+}
