@@ -93,34 +93,90 @@ for (let j = 0; j < 35; j++) {
 
     var slide_tyl = document.querySelectorAll('.slide_tyl')
     var slide_przod = document.querySelectorAll('.slide_przod')
-    var galeria3 = document.querySelectorAll('.galeria')
+   
 
-
-    function slide1(i){
-        for (let i = 0; i < 35; i++) {
-            if(galeria3[i].childNodes[0].classList.contains('widoczne_zdjecie')){
-                galeria3[i].childNodes[0].classList.remove('widoczne_zdjecie')
-                galeria3[i].childNodes[1].classList.add('widoczne_zdjecie')
-            }
-            else if(galeria3[i].childNodes[1].classList.contains('widoczne_zdjecie')){
-                galeria3[i].childNodes[1].classList.remove('widoczne_zdjecie')
-                galeria3[i].childNodes[2].classList.add('widoczne_zdjecie')
-            }
-            else if(galeria3[i].childNodes[2].classList.contains('widoczne_zdjecie')){
-                galeria3[i].childNodes[2].classList.remove('widoczne_zdjecie')
-                galeria3[i].childNodes[3].classList.add('widoczne_zdjecie')
-            }
-            else if(galeria3[i].childNodes[3].classList.contains('widoczne_zdjecie')){
-                galeria3[i].childNodes[3].classList.remove('widoczne_zdjecie')
-                galeria3[i].childNodes[4].classList.add('widoczne_zdjecie')
-            }
-            else if(galeria3[i].childNodes[4].classList.contains('widoczne_zdjecie')){
-                galeria3[i].childNodes[4].classList.remove('widoczne_zdjecie')
-                galeria3[i].childNodes[0].classList.add('widoczne_zdjecie')
-            }
+    slide_przod.forEach(Element =>{
+        Element.addEventListener('click',function(){
+            let galeria3 = Element.parentElement.childNodes[0]
             
-        }
-    }
+                if(galeria3.childNodes[0].classList.contains('widoczne_zdjecie')){
+                    galeria3.childNodes[0].classList.remove('widoczne_zdjecie')
+                    galeria3.childNodes[1].classList.add('widoczne_zdjecie')
+                }
+                else if(galeria3.childNodes[1].classList.contains('widoczne_zdjecie')){
+                    galeria3.childNodes[1].classList.remove('widoczne_zdjecie')
+                    galeria3.childNodes[2].classList.add('widoczne_zdjecie')
+                }
+                else if(galeria3.childNodes[2].classList.contains('widoczne_zdjecie')){
+                    galeria3.childNodes[2].classList.remove('widoczne_zdjecie')
+                    galeria3.childNodes[3].classList.add('widoczne_zdjecie')
+                }
+                else if(galeria3.childNodes[3].classList.contains('widoczne_zdjecie')){
+                    galeria3.childNodes[3].classList.remove('widoczne_zdjecie')
+                    galeria3.childNodes[4].classList.add('widoczne_zdjecie')
+                }
+                else if(galeria3.childNodes[4].classList.contains('widoczne_zdjecie')){
+                    galeria3.childNodes[4].classList.remove('widoczne_zdjecie')
+                    galeria3.childNodes[0].classList.add('widoczne_zdjecie')
+                }
+                
+            
+        })
+    })
+    slide_tyl.forEach(Element=>{
+        Element.addEventListener('click',function(){
+            let galeria3 = Element.parentElement.childNodes[0]
+            
+                if(galeria3.childNodes[0].classList.contains('widoczne_zdjecie')){
+                    galeria3.childNodes[0].classList.remove('widoczne_zdjecie')
+                    galeria3.childNodes[4].classList.add('widoczne_zdjecie')
+                }
+                else if(galeria3.childNodes[4].classList.contains('widoczne_zdjecie')){
+                    galeria3.childNodes[4].classList.remove('widoczne_zdjecie')
+                    galeria3.childNodes[3].classList.add('widoczne_zdjecie')
+                }
+                else if(galeria3.childNodes[3].classList.contains('widoczne_zdjecie')){
+                    galeria3.childNodes[3].classList.remove('widoczne_zdjecie')
+                    galeria3.childNodes[2].classList.add('widoczne_zdjecie')
+                }
+                else if(galeria3.childNodes[2].classList.contains('widoczne_zdjecie')){
+                    galeria3.childNodes[2].classList.remove('widoczne_zdjecie')
+                    galeria3.childNodes[1].classList.add('widoczne_zdjecie')
+                }
+                else if(galeria3.childNodes[1].classList.contains('widoczne_zdjecie')){
+                    galeria3.childNodes[1].classList.remove('widoczne_zdjecie')
+                    galeria3.childNodes[0].classList.add('widoczne_zdjecie')
+                }
+                
+            
+        })
+    })
+
+    // function slide1(i){
+    //     for (let i = 0; i < 35; i++) {
+    //         if(galeria3[i].childNodes[0].classList.contains('widoczne_zdjecie')){
+    //             galeria3[i].childNodes[0].classList.remove('widoczne_zdjecie')
+    //             galeria3[i].childNodes[1].classList.add('widoczne_zdjecie')
+    //         }
+    //         else if(galeria3[i].childNodes[1].classList.contains('widoczne_zdjecie')){
+    //             galeria3[i].childNodes[1].classList.remove('widoczne_zdjecie')
+    //             galeria3[i].childNodes[2].classList.add('widoczne_zdjecie')
+    //         }
+    //         else if(galeria3[i].childNodes[2].classList.contains('widoczne_zdjecie')){
+    //             galeria3[i].childNodes[2].classList.remove('widoczne_zdjecie')
+    //             galeria3[i].childNodes[3].classList.add('widoczne_zdjecie')
+    //         }
+    //         else if(galeria3[i].childNodes[3].classList.contains('widoczne_zdjecie')){
+    //             galeria3[i].childNodes[3].classList.remove('widoczne_zdjecie')
+    //             galeria3[i].childNodes[4].classList.add('widoczne_zdjecie')
+    //         }
+    //         else if(galeria3[i].childNodes[4].classList.contains('widoczne_zdjecie')){
+    //             galeria3[i].childNodes[4].classList.remove('widoczne_zdjecie')
+    //             galeria3[i].childNodes[0].classList.add('widoczne_zdjecie')
+    //         }
+            
+    //     }
+    // }
     function slide2(i){
         for (let i = 0; i < 35; i++) {
             if(galeria3[i].childNodes[0].classList.contains('widoczne_zdjecie')){
